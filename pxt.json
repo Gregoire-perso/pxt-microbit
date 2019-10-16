@@ -12,7 +12,8 @@
         "README.md",
         "main.ts",
         "displayPikachu.ts",
-        "displayImage.ts"
+        "displayImage.ts",
+        "pikachu.txt"
     ],
     "testFiles": [
         "test.ts"
