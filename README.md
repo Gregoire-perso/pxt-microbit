@@ -5,11 +5,23 @@
 
 ## Comment afficher une image
 
-1. Créer un ficher avec une seule fonction dedans. (par convention, on appellera ce fichier du même nom que la fonction, et on nommera cette fonction "displayNomImage")
+### Prérequis
+
+1. Posséder une liste représentant la couleur de chaque pixel de l'image.
+ - Pour ce faire, il suffit d'utiliser un logiciel (qui n'est pas encore sur le GitHub parce que je sais pas si on a vraiment les droits donc demandez moi directement...) qui transforme chaque pixel en une couleur 
+ - Importer l'image, puis aller dans 'Option --> Conversion' (bien choisir la couleur en R5G3B5 au format 16 bits) et enfin cliquer sur "Show preview"
+ - Copier / coller la liste incompréhensible qui s'affiche dans un fichier qui devra s'appeler 'colors_in_RGB565.txt'
+ - Exécuter ensuite le fichier 'convertisseur.py' (trouvable dans ce GitHub :) )
+ - Le fichier de sortie s'appellera 'colors_in_decimal.txt'
+ 
+ ### Comment faire ?
+
+1. Créer un ficher avec une seule fonction dedans. (par convention, on appellera ce fichier du même nom que la fonction, et on nommera cette fonction "display" suivi du nom de votre image en commançant par une majuscule)
 2. Cette fonction devra retourner plusieurs variables sous forme de pointeurs ( _'nom des variables'_ ) :      
 `return { listOfColor: 'listeDesCouleurs', width: 'largeurImage' "number", height: 'hauteurImage', transparencyColor: 'couleurDeTransparence', numberOfOccurence: 'nombreCouleur' };` (Tous les pointeurs doivent être de type `number` sauf la liste de couleurs qui doit être de type `number[][]`)
-Pour plus de détails sur ces arguements, se référer au fichier "displayPikachu", tout y est commenté ;)
-3. Initialiser une variable à l'aide de la fonction correspondant à l'image (`let 'image' = display'NomImage'();`)
+> Pour plus de détails sur ces arguements, se référer au fichier "displayPikachu", tout y est commenté ;)
+
+3. Initialiser une variable à l'aide de la fonction correspondant à l'image (`let 'image' = displayVotreImage();`)
 4. Appeler la fonction "displayImage()" avec `x` et `y` respectivement l'absisse et l'ordonnée du point en haut à gauche du placement de l'image (comme ci-après).
 `displayImage(x, y, image.listOfColor, image.width, image.height, image.transparencyColor, image.numberOfOccurence)` (Vous pouvez remplacer `image.transparencyColor` par `-1` si vous ne voulez pas utiliser de couleur de transparence)
  
