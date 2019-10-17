@@ -9,9 +9,9 @@ function displayPikachu() {
     //Pour obtenir la largeur et la hauteur de votre image, ouvrez le fichier 'caracteristiques.txt' et de copier/coller les valeurs correspondantes
     let width = 24;
     let height = 27;
-    
+
     //C'est à vous de donner la couleur de l'arrière-plan (Cette couleur est souvent la première qui se trouve dans votre liste de couleurs ;) )
-    let couleur_transparence = 6451;
+    let couleur_transparence = 64512;
     
     let nombre_occurence: number = (liste_colors.length - 1) * (liste_colors[0].length) + liste_colors[liste_colors.length - 1].length;
     return {

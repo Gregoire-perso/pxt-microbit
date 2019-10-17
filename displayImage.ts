@@ -34,7 +34,6 @@ function displayImage(x_depart: number, y_depart: number, taille_pixel: number,
     }
 
     //Rafraichissement de la partie de l'écran correspondant à la taille de l'image
-    /*LCD1IN8.LCD_DisplayWindows(x_depart - taille_pixel, y_depart - taille_pixel,
-        width * taille_pixel, height * taille_pixel);*/
-    LCD1IN8.LCD_Display()
+    LCD1IN8.LCD_DisplayWindows(x_depart - taille_pixel, y_depart - taille_pixel,
+        width * taille_pixel + 10 - taille_pixel, height * taille_pixel + 10 - taille_pixel);
 }
