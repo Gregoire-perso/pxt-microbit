@@ -31,7 +31,7 @@ fich.close()
 
 fichier = open("caracteristiques.txt", "w")
 
-fichier.write("\nHauteur de l'image : " + height)
-fichier.write("\nLargeur de l'image : " + width)
+fichier.write("\nHauteur de l'image : " + str(height))
+fichier.write("\nLargeur de l'image : " + str(width))
  	 
 fichier.close()
