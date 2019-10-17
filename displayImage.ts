@@ -1,7 +1,18 @@
 function displayImage(x_depart: number, y_depart: number, taille_pixel: number,
-    liste_colors: number[][], width: number, height: number, 
-    couleur_transparence: number, nombre_occurence: number, 
+    liste_colors: number[][], width: number, height: number,
+    couleur_transparence: number, nombre_occurence: number,
     replace_color: number) {
+    /*Explication des arguments : 
+        x_depart, y_depart --> coordonnée de l'image (voir avec taille pixel)
+        taille_pixel --> taille de chaque pixel
+        liste_colors --> liste des couleurs de chaque pixel de l'image
+        width --> largeur de l'image
+        height --> hauteur de l'image
+        couleur_transparence --> couleur de 'liste_colors' à ne pas afficher
+        nombre_occurence --> nombre de pixel de l'image
+        replace_color --> couleur à afficher à la place de la couleur de transparence
+    */
+
     //Définition de la taille de chaque pixel (via fonction DOT_PIXEL)
     let affiche_pixel;
     switch (taille_pixel) {
