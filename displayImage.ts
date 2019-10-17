@@ -1,5 +1,6 @@
 function displayImage(x_depart: number, y_depart: number, taille_pixel: number,
-    liste_colors: number[], width: number, height: number, couleur_transparence: number) {
+    liste_colors: number[][], width: number, height: number, couleur_transparence: number, 
+    nombre_pixels: number) {
 
     //Définition de la taille de chaque pixel (via fonction DOT_PIXEL)
     let affiche_pixel;
@@ -26,10 +27,10 @@ function displayImage(x_depart: number, y_depart: number, taille_pixel: number,
     }
 
     //Affichage des points 1 par 1
-    for (let i = 0; i < liste_colors.length; i++) {
-        if (liste_colors[i] != couleur_transparence) {
+    for (let i = 0; i < nombre_pixels; i++) {
+        if (liste_colors[(i%100)][i] != couleur_transparence) {
             LCD1IN8.DrawPoint(x_depart + (i % width) * taille_pixel, y_depart + Math.trunc(i / width) * taille_pixel,
-                liste_colors[i], affiche_pixel);
+                liste_colors[(i%10)][i], affiche_pixel);
         }
     }
 
