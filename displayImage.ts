@@ -2,7 +2,8 @@ function displayImage(x_depart: number, y_depart: number, taille_pixel: number,
     liste_colors: number[][], width: number, height: number,
     couleur_transparence: number, nombre_occurence: number,
     replace_color: number) {
-    /*Explication des arguments : 
+    /*
+    Explication des arguments : 
         x_depart, y_depart --> coordonnée de l'image (voir avec taille pixel)
         taille_pixel --> taille de chaque pixel
         liste_colors --> liste des couleurs de chaque pixel de l'image
@@ -43,7 +44,8 @@ function displayImage(x_depart: number, y_depart: number, taille_pixel: number,
             LCD1IN8.DrawPoint(x_depart + (i % width) * taille_pixel, y_depart + Math.trunc(i / width) * taille_pixel,
                 liste_colors[Math.trunc(i / 100)][i % 100], affiche_pixel);
         }
-        else {
+
+        else if (replace_color != -1) {
             LCD1IN8.DrawPoint(x_depart + (i % width) * taille_pixel, y_depart + Math.trunc(i / width) * taille_pixel,
                 replace_color, affiche_pixel);
         }
@@ -51,5 +53,6 @@ function displayImage(x_depart: number, y_depart: number, taille_pixel: number,
 
     //Rafraichissement de la partie de l'écran correspondant à la taille de l'image
     LCD1IN8.LCD_DisplayWindows(x_depart - taille_pixel, y_depart - taille_pixel,
-        (width + 1) * taille_pixel, (height + 1) * taille_pixel);
+        (width - 1) * taille_pixel + 10, (height - 1) * taille_pixel + 10);
+
 }
