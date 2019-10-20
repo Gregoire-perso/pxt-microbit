@@ -1,4 +1,4 @@
-LCD1IN8.LCD_Init();
+/*LCD1IN8.LCD_Init();
 LCD1IN8.LCD_Clear();
 LCD1IN8.LCD_Filling(0)
 
@@ -13,6 +13,4 @@ let pika_stay = displayPikachuStay();
 displayImage(70, 10, 2, pika_stay.listOfColor, pika_stay.width, pika_stay.height,
     pika_stay.transparencyColor, pika_stay.numberOfOccurence, -1);
 
-LCD1IN8.LCD_DisplayWindows(68, 8, (pika_stay.width - 1) * 2 + 10 + 60, (pika_stay.height - 1) * 2 + 10);
-
-
+LCD1IN8.LCD_DisplayWindows(68, 8, (pika_stay.width - 1) * 2 + 10 + 60, (pika_stay.height - 1) * 2 + 10);*/
