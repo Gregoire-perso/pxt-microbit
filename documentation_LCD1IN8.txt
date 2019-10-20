@@ -4,9 +4,9 @@ Si une information vous semble erronée, n'hésitez pas à nous contacter via Gi
 
 
 Prérequis : 
-	--> Les couleurs utilisées par l'écran sont des couleurs au format RGB565 mais l'éditeur MakeCode ne prend en compte que les couleurs au format décimal, il faut donc les convertir en décimal
-	--> Lors des dessins, la taille de chaque point fait entre 1 et 4 pixels. La taille des pixels est de type 'DOT_PIXEL' et s'écrit 'DOT_PIXEL.DOT_PIXEL_' suivi de la taille de chaque point en pixel.
-	--> Le remplissage d'une figure est de type 'DRAW_FILL' et s'écrit 'DRAW_FILL.DRAW_' suivi de 'EMPTY' (si vous voulez une figure vide) ou 'FULL' (si vous voulez une figure pleine)
+	--> Les couleurs utilisées par l'écran sont des couleurs au format RGB565 mais l'éditeur MakeCode ne prend en compte 		que les couleurs au format décimal, il faut donc les convertir en décimal
+	--> Lors des dessins, la taille de chaque point fait entre 1 et 4 pixels. La taille des pixels est de type 		   'DOT_PIXEL' et s'écrit 'DOT_PIXEL.DOT_PIXEL_' suivi de la taille de chaque point en pixel.
+	--> Le remplissage d'une figure est de type 'DRAW_FILL' et s'écrit 'DRAW_FILL.DRAW_' suivi de 'EMPTY' (si vous voulez 		  une figure vide) ou 'FULL' (si vous voulez une figure pleine)
 
 
 LCD1IN8.LCD1IN8_Init()
@@ -46,6 +46,9 @@ LCD1IN8.DisString(int X, int Y, str Chaine, int Couleur)
 	--> Affiche une chaine de caractère
 	--> Chaque caractère fait 7 pixels de large pour 9 pixels de haut
 	--> Le retour à la ligne est automatique si la longeur de la chaine de caractère dépasse la largeur de l'écran
+	--> Liste non exhaustives des signes non pris en charge : °, les caractères accentués ainsi que les caractères sous 		forme d'indice ou d'exposants.
+	--> Ne pas oublier de mettre un caractère d'échappement avant de mettre des guillemets doubles
+	--> Les séquences d'échappement ne sont pas prises en compte et ne sont donc pas bien géré
 
 LCD1IN8.DisNumber(int X, int Y, int Nombre, int Couleur)
 	--> Affiche un nombre
