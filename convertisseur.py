@@ -19,8 +19,9 @@ fich.write("[[")
 
 for i in range(len(colors_decimal)):
     if i % 100 == 0 and i != 0:
-        fich.write("], [")
         fich.write(str(colors_decimal[i]))
+        fich.write("], [")
+        
     elif i < len(colors_decimal)-1:
         fich.write(str(colors_decimal[i]) + ", ")
 
