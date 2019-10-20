@@ -33,6 +33,11 @@
 
 > Crédit : Grégoire Lefaure et Maxime Dautriche
 
+## Documentation
+
+Une documentation sommaire est disponible dans le fichier 'documentation_LCD1IN8.txt'. Si vous avez une idée ou une réctification pour cette documentation, n'hésitez pas !
+
+
 
 ## TODO
 
