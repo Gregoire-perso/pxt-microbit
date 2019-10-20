@@ -1,5 +1,5 @@
 #Le fichier d'entrée doit s'appeler 'colors_in_RGB565.txt'
-#Le fichier de sortie s'appelera 'encode_image_in_js.txt'
+#Les fichiers de sortie s'appeleront 'colors_in_decimal.txt' et 'caracteristique.txt'
 
 with open("colors_in_RGB565.txt", "r") as file:
     chaine = file.read()
