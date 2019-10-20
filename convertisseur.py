@@ -14,21 +14,22 @@ colors_decimal = []
 for i in liste:
     colors_decimal.append(int(i, 16))
 
-fich = open("colors_in_decimal.txt", "w")
-fich.write("[[")
-
+a = "[["
 for i in range(len(colors_decimal)):
     if i % 100 == 0 and i != 0:
-        fich.write(str(colors_decimal[i]))
-        fich.write("], [")
+        a += "], ["
         
-    elif i < len(colors_decimal)-1:
-        fich.write(str(colors_decimal[i]) + ", ")
+    if i < len(colors_decimal)-1:
+        a += str(colors_decimal[i]) + ", "
 
     elif i == len(colors_decimal)-1:
-        fich.write(str(colors_decimal[i]))
+        a += str(colors_decimal[i])
 
-fich.write("]]")
+a += "]]"
+a = a.replace(", ]", "]")
+
+fich = open("colors_in_decimal.txt", "w")
+fich.write(a)
 fich.close()
 
 fichier = open("caracteristiques.txt", "w")
