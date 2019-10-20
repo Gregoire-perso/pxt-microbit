@@ -45,6 +45,7 @@ LCD1IN8.DrawCircle(int X_centre, int Y_centre, int Rayon, int Couleur, Remplissa
 LCD1IN8.DisString(int X, int Y, str Chaine, int Couleur)
 	--> Affiche une chaine de caractère
 	--> Chaque caractère fait 7 pixels de large pour 9 pixels de haut
+	--> Le retour à la ligne est automatique si la longeur de la chaine de caractère dépasse la largeur de l'écran
 
 LCD1IN8.DisNumber(int X, int Y, int Nombre, int Couleur)
 	--> Affiche un nombre
