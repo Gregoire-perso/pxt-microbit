@@ -52,9 +52,5 @@ function displayImage(x_depart: number, y_depart: number, taille_pixel: number,
     }
 
     //Rafraichissement de la partie de l'écran correspondant à la taille de l'image doit se faire en dehors de cette fonction
-    
-    
-    //LCD1IN8.LCD_DisplayWindows(x_depart - taille_pixel, y_depart - taille_pixel, (width - 1) * taille_pixel + 10, (height - 1) * taille_pixel + 10);
-
-    //LCD1IN8.LCD_DisplayWindows(5, 5, 150, 120)
+    //test(x_depart - taille_pixel, y_depart - taille_pixel, (width - 1) * taille_pixel + 10, (height - 1) * taille_pixel + 10)
 }
