@@ -2,7 +2,7 @@ LCD1IN8.LCD_Init();
 LCD1IN8.LCD_Clear();
 
 let a = "Coucou les gens !"
-displayDialogue(a)
+displayDialogue(10, 10, a, 0)
 
 
 

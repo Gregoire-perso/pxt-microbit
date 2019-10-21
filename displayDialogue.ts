@@ -1,10 +1,7 @@
-function displayDialogue(text: string) {
-    for (let i = 0; text.length; i++) {
-        let partie_a_afficher = ""
-        for (let j = 0; j < i; j++) {
-            partie_a_afficher += text[j]
-        }
-        LCD1IN8.DisString(10, 10, partie_a_afficher, 0)
-        LCD1IN8.LCD_DisplayWindows(10, 10, 7 * text.length + 10, 30)
+function displayDialogue(x: number, y: number, text: string, color: number) {
+    for (let i = 0; i < text.length; i++) {
+        LCD1IN8.DisString(x + i * 7, y, text[i], color)
+        LCD1IN8.LCD_DisplayWindows(x + i * 7, y, 7 * text.length + x, y + 15)
+        control.waitMicros(1000)
     }
 } 
