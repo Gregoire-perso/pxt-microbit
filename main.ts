@@ -1,11 +1,6 @@
 LCD1IN8.LCD_Init();
 LCD1IN8.LCD_Clear();
 
-let a = "Coucou les gens !"
-displayDialogue(10, 10, a, 0)
-
-
-
 /*
 let pika_run = displayPikachuRun();
 displayImage(10, 10, 2, pika_run.listOfColor, pika_run.width, pika_run.height,
