@@ -18,9 +18,9 @@ LCD1IN8.LCD_DisplayWindows(68, 8, (pika_stay.width - 1) * 2 + 10 + 60, (pika_sta
 */
 
 /*
-Exemple d'affichage de dialogue
+//Exemple d'affichage de dialogue
 
-texte = "Coucou tout le monde ! Comment allez-vous ?";
+let texte = "Coucou tout le monde !Comment allez-vous ?";
 displayDialogue(5, 5, texte, 0, 10);
-
 */
+
