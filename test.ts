@@ -2,26 +2,16 @@
 LCD1IN8.LCD_Init();
 LCD1IN8.LCD_Clear();
 
-
 //Exemple d'affichage d'image
 
-let pika_run = displayPikachuRun();
-displayImage(10, 10, 2, pika_run.listOfColor, pika_run.width, pika_run.height,
-    pika_run.transparencyColor, pika_run.numberOfOccurence, -1);
+displayImage(5, 5, displayPikachuRun(), 2)
+displayImage(80, 5, displayPikachuStay(), 2, false)
 
-LCD1IN8.LCD_DisplayWindows(8, 8, (pika_run.width - 1) * 2 + 10, (pika_run.height - 1) * 2 + 10);
+//displayImage(1, 1, 1, displayFullScreenTwo(), false)
 
-let pika_stay = displayPikachuStay();
-displayImage(70, 10, 2, pika_stay.listOfColor, pika_stay.width, pika_stay.height,
-    pika_stay.transparencyColor, pika_stay.numberOfOccurence, -1);
+//Exemple d'affichage de texte
 
-LCD1IN8.LCD_DisplayWindows(68, 8, (pika_stay.width - 1) * 2 + 10 + 60, (pika_stay.height - 1) * 2 + 10);
-
-
-
-//Exemple d'affichage de dialogue
-
-let texte = "Coucou tout le monde !Comment allez-vous ?";
-displayDialogue(5, 75, texte, 0, 75);
-
-
+displayDialogue(3, 64, "Vous pouvez afficher  du texte...", 50, 0)
+displayDialogue(80, 77, "en gras, ", 0, 100, true)
+displayDialogue(3, 90, "souligne,", 0, 50, false, true)
+displayDialogue(63, 90, " ou les deux!", 0, 0, true, true)
